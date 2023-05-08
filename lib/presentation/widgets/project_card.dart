@@ -53,18 +53,18 @@ class ProjectCardState extends State<ProjectCard> {
         width: AppDimensions.normalize(150),
         height: AppDimensions.normalize(90),
         decoration: BoxDecoration(
-          color: ColorManager.goldColor,
-          borderRadius: BorderRadius.circular(10),
+          color: ColorManager.primaryColor,
+          borderRadius: BorderRadius.circular(20),
           boxShadow: isHover ? [
             const BoxShadow(
-              color: ColorManager.greyColor,
+              color: ColorManager.whiteColor,
               blurRadius: 12.0,
               offset: Offset(0.0, 0.0),
             )
           ] :
           [
             BoxShadow(
-              color: Colors.black.withAlpha(100),
+              color: ColorManager.blackColor.withAlpha(100),
               blurRadius: 12.0,
               offset: const Offset(0.0, 0.0),
             )
@@ -135,7 +135,9 @@ class ProjectCardState extends State<ProjectCard> {
               child: FittedBox(
                 fit: BoxFit.fill,
                 child: widget.banner != null ?
-                Image.asset(widget.banner!) : Container(),
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(widget.banner!)) : Container(),
               ),
             ),
           ],

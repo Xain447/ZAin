@@ -22,7 +22,7 @@ class TopArrowState extends State<TopArrow> {
     final scrollController = Get.put(ScrollableController());
 
     return Positioned(
-      bottom: AppDimensions.normalize(30),
+      bottom: AppDimensions.normalize(20),
       right: -7,
       child: EntranceFader(
         offset: const Offset(0, 20),
@@ -62,7 +62,7 @@ class TopArrowState extends State<TopArrow> {
                   ),
                   child: Icon(
                     Icons.arrow_drop_up_outlined,
-                    color: ColorManager.whiteColor,
+                    color: ColorManager.primaryColor,
                     size: MediaQuery.of(context).size.height * 0.05,
                   ),
                 ),

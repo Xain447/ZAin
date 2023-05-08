@@ -23,13 +23,14 @@ class Footer extends StatelessWidget {
           children: [
             const Text(
               "Developed with 💙 in ",
+              style: TextStyle(color: ColorManager.secondaryColor),
             ),
 
             InkWell(
               onTap: () => openURL("https://github.com/Xain447/my_portfolio"),
               child: const Text(
                 "Flutter",
-                style: TextStyle(color: ColorManager.goldColor),
+                style: TextStyle(color: ColorManager.whiteColor),
               ),
             )
           ],

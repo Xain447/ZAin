@@ -29,7 +29,7 @@ class SocialLinks extends StatelessWidget {
             ),
             iconSize: ResponsiveWidget.isMobile(context) ? AppDimensions.normalize(10) : AppDimensions.normalize(15),
             onPressed: () => openURL( socialLinks[e.key]),
-            hoverColor: ColorManager.secondaryColor,
+            hoverColor: ColorManager.whiteColor,
           ),
         ),
       )
