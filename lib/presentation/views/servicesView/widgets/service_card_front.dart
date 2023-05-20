@@ -15,9 +15,11 @@ class ServiceCard extends StatefulWidget {
   final String serviceIcon;
   final String serviceTitle;
   final String serviceDescription;
+  final double height;
+  final double width;
 
   const ServiceCard({Key? key, required this.serviceIcon, required this.serviceTitle,
-    required this.serviceDescription,}) : super(key: key);
+    required this.serviceDescription, required this.height, required this.width,}) : super(key: key);
 
   @override
   ServiceCardState createState() => ServiceCardState();
@@ -29,7 +31,7 @@ class ServiceCardState extends State<ServiceCard> {
 
   @override
   Widget build(BuildContext context) {
-
+    final width = MediaQuery.of(context).size.width;
     return InkWell(
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
@@ -52,8 +54,8 @@ class ServiceCardState extends State<ServiceCard> {
         flipOnTouch: kIsWeb ? false : true,
         key: cardKey,
         back: Container(
-          height: MediaQuery.of(context).size.height * 0.3,
-          width: MediaQuery.of(context).size.width * 0.18,
+          height: widget.height,
+          width: widget.width,
           padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 6.0),
           decoration: BoxDecoration(
             color: ColorManager.secondaryColor,
@@ -117,14 +119,14 @@ class ServiceCardState extends State<ServiceCard> {
         // ),
        front: SizedBox(
          height: MediaQuery.of(context).size.height * 0.3,
-         width: MediaQuery.of(context).size.width * 0.18,
+         width: widget.width,
          child: Stack(
            children: [
              Positioned(
                bottom: MediaQuery.of(context).size.height * 0.0,
                child: Container(
                  height: MediaQuery.of(context).size.height * 0.22,
-                 width: MediaQuery.of(context).size.width * 0.18,
+                 width: widget.width,
                  padding: const EdgeInsets.only(left: 12.0, right: 12.0),
                  decoration: BoxDecoration(
                    color: ColorManager.secondaryColor,
@@ -150,7 +152,7 @@ class ServiceCardState extends State<ServiceCard> {
                      textAlign: TextAlign.center,
                      style: AppText.b1!.copyWith(
                        color: ColorManager.primaryColor,
-                       fontSize: 22,
+                       fontSize: width < 400 ? 14 : 18,
                        fontWeight: FontWeight.w500
                      ),
                    ),

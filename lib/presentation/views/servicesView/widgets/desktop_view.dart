@@ -114,6 +114,8 @@ class DesktopView extends StatelessWidget {
                       serviceTitle: servicesTitles[e.key],
                       serviceDescription:
                       servicesDescription[e.key],
+                      height: MediaQuery.of(context).size.height * 0.3,
+                      width: MediaQuery.of(context).size.width * 0.18,
                     ),
                     ).toList(),
                   )

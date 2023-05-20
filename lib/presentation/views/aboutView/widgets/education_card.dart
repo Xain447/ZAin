@@ -14,6 +14,7 @@ class EducationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return Container(
       margin: const EdgeInsets.only(left: 17, right: 10),
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
@@ -31,11 +32,13 @@ class EducationCard extends StatelessWidget {
               buildSpaceHorizontal(10),
               const Icon(Icons.school, color: ColorManager.whiteColor, size: 15,),
               buildSpaceHorizontal(15),
-              Text(
-                " $school ",
-                style: AppText.l1b!.copyWith(
-                    fontSize: AppDimensions.font(6),
-                    color: ColorManager.whiteColor
+              Flexible(
+                child: Text(
+                  " $school ",
+                  style: AppText.l1b!.copyWith(
+                      fontSize: AppDimensions.font(6),
+                      color: ColorManager.whiteColor
+                  ),
                 ),
               ),
             ],

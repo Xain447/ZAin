@@ -18,9 +18,13 @@ class DesktopView extends StatelessWidget {
       padding: Space.h!,
       child: Column(
         children: [
+          Space.y2!,
+          Space.y2!,
+          Space.y2!,
           const HeadingText(
             text: "\nPortfolio",
           ),
+          Space.y1!,
           const SubHeadingText(
             text: "Here are few samples of my previous work :)\n\n",
           ),
@@ -28,6 +32,7 @@ class DesktopView extends StatelessWidget {
             alignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.center,
             runSpacing: AppDimensions.normalize(10),
+            spacing: AppDimensions.normalize(5),
             children: banners.asMap().entries.map((e) => ProjectCard(
                 banner: e.value,
                 projectIcon: icons[e.key],
@@ -42,8 +47,7 @@ class DesktopView extends StatelessWidget {
             height: AppDimensions.normalize(14),
             width: AppDimensions.normalize(50),
             child: OutlinedButton(
-              onPressed: () {},
-              // onPressed: () => openURL(StaticUtils.gitHub),
+              onPressed: () => openURL("https://github.com/Xain447"),
               child: Text(
                 'See More',
                 style: AppText.l1b,

@@ -3,7 +3,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/presentation/views/aboutView/about_view.dart';
-import 'package:my_portfolio/presentation/views/certificateView/certificate_view.dart';
 import 'package:my_portfolio/presentation/views/contactView/contact_view.dart';
 import 'package:my_portfolio/presentation/views/experienceView/experience_view.dart';
 import 'package:my_portfolio/presentation/views/homeView/home_view.dart';
@@ -92,7 +91,6 @@ const List<String> navbarNames = [
   'EXPERIENCE',
   'SERVICES',
   'PROJECTS',
-  'CERTIFICATIONS',
   'CONTACT',
 ];
 
@@ -104,7 +102,6 @@ const List<IconData> drawerIcons = [
   Icons.work,
   Icons.home_repair_service,
   Icons.build,
-  Icons.settings,
   Icons.contact_page,
 ];
 
@@ -113,25 +110,21 @@ const List<IconData> drawerIcons = [
 const List<String> socialIconURL = [
   "https://img.icons8.com/metro/208/ffffff/facebook-new--v2.png",
   "https://img.icons8.com/ios-glyphs/480/ffffff/instagram-new.png",
-  "https://img.icons8.com/android/480/ffffff/twitter.png",
   "https://img.icons8.com/metro/308/ffffff/linkedin.png",
   "https://img.icons8.com/material-rounded/384/ffffff/github.png",
-  "https://img.icons8.com/ios-filled/500/ffffff/medium-monogram--v1.png"
 ];
 
 // social links
 const List<String> socialLinks = [
-  "https://facebook.com/mhmzdev",
-  "https://instagram.com/mhmzdev",
-  "https://twitter.com/mhmzdev",
-  "https://linkedin.com/in/mhmzdev",
-  "https://github.com/mhmzdev",
-  "https://mhmzdev.medium.com"
+  "https://www.facebook.com/profile.php?id=100014063048553",
+  "https://www.instagram.com/kzain446/",
+  "https://www.linkedin.com/in/zain-ullah-0b1733150/",
+  "https://github.com/Xain447"
 ];
 
 
 // my resume
-const String myResume = 'https://drive.google.com/file/d/1bDNNrkQtNVJbXcdwMSx0crQQvAF_nMwV/view?usp=sharing';
+const String myResume = 'https://flowcv.com/resume/dc5j975t6m';
 
 
 // views
@@ -141,7 +134,6 @@ const List<Widget> views = [
   ExperienceView(),
   ServicesView(),
   PortfolioView(),
-  CertificateView(),
   ContactView(),
   Footer(),
 ];
@@ -158,7 +150,7 @@ const List<String> servicesTitles = [
   "Android App Development",
   "iOS App Development",
   "Web App Development",
-  "Rapid Prototyping",
+  "Rapid\nPrototyping",
 ];
 
 const List<String> servicesDescription = [
@@ -184,7 +176,6 @@ const List<String> banners = [
   AssetsManager.whyApp,
   AssetsManager.y2y,
 ];
-
 
 // icons
 const List<String> icons = [
@@ -216,27 +207,27 @@ List<String> projectTitle = [
 
 // links
 List<String> links = [
-  "https://pub.dev/packages/awesome_snackbar_content",
-  "https://github.com/mhmzdev/The_Holy_Quran_App",
-  "https://github.com/mhmzdev/MedKit-Pharmacy-App-Using-Flutter",
-  "https://github.com/mhmzdev/Here-I-Am-Alert-App",
-  "https://github.com/mhmzdev/Covid19-Tracker-App",
-  "https://github.com/mhmzdev/Messenger-Chat-Head-Flutter-UI",
-  "https://github.com/mhmzdev/flutter.dev-Flutter-Web-Clone",
-  "https://github.com/mhmzdev/Earbender_Music_App",
-  "https://github.com/mhmzdev/FTP_GUI_Java",
-  "https://github.com/mhmzdev/My-Order-Resturant-Ordering-System",
+  "https://github.com/Xain446/adeejMarketing",
+  "https://github.com/Xain447/fyp-Home-Services-",
+  "https://github.com/Xain447/fruit_dukan",
+  "https://play.google.com/store/apps/details?id=com.kzainapps.jamaicaoutingz",
+  "https://play.google.com/store/apps/details?id=com.kzainapps.perfectholyquran",
+  "https://play.google.com/store/apps/details?id=ita.plf.app",
+  "https://play.google.com/store/apps/details?id=com.kzainapps.ritzy",
+  "https://github.com/Xain447/whips-Car-Rental-Project-/tree/master",
+  "https://play.google.com/store/apps/details?id=com.thewhyapp.app",
+  "https://github.com/Xain447/youth2youth",
 ];
 
 const List<String> description = [
-  "A very unique dart package to uplift the snackbar experience in flutter. Available at pub.dev now!",
-  "Application of Holy book of Muslims, Al-Qur'an. Developed using Flutter. Powered with live RestAPI given in README.md",
-  "A Phramacy app developed using Flutter powered with Firebase as database with Doctor and Patient panels.",
-  "Here I am is an Alert app that Sends alert SMS holding your location (Address and Google Maps) to your loved ones.",
-  "A live trakcer for COVID19 stats across the Globe and my Home country Pakistan. It uses APIs so the data is live.",
-  "Tried to clone the famous Chat Heads by Facebook Messenger using Flutter. Its basically in-app not exactly like the original chat head.",
-  "Flutter Official Site clone using Flutter Web. Try the live site here. For the time being its not responsive fully so there might be responsiveness issues.",
-  "A simple GUI based Java application that sends file from Client to Server but not the other way around.",
-  "A concept app for self-services at various restaurants now a days. More like a Restaurant Ordering System.",
-  "Its my end semester project. The whole design I developed here is an inspiration from my favortie Flutter Developer Marcin Szałek and his blog Fidev."
+  "A very unique eCommerce app named Adeej Marketing where user can buy or order things from their phone with ease.",
+  "A very demanding app which provide services like Electrican, plumber and more from the comfort of the home. This was my FYP.",
+  "Fruit Dukann is an online store where user can find and order their daily base need like fruits, vegetables and other stuff in a few clicks.",
+  "Jamaica Outingz is a tour guide and tour booking app where user can Book Tours and Excursions in Jamaica.",
+  "Application of Holy book of Muslims, Al-Qur'an. Developed using Flutter. Powered with live RestAPI, find qibla directions and view live madina & makkah.",
+  "Pakistan Learning Festival is a social movement founded by the renowned educator-thought leader and activist, Baela Raza Jamil CEO of Idara-e-Taleem-o-Aagahi (ITA) and co-founded by the internationally and nationally awarded Ameena Saiyid, who headed a multinational corporation and pioneered ‘literature festivals’ in Pakistan; she is the Founder Director of the Adab Festival Pakistan.",
+  "Here you can find the top 10 most expensive products and services in the world. We aim to provide you a single resource to find and percur the most luxurious things on earth.",
+  "This is one of my favouurite project in which user can find a car on rent and also can give his own car on rent to others at the same time.",
+  "Select specific problems to get answers and discover how to transform them for the better. Gain help and motivation by learning the perspectives of spirituality, psychology and other schools of thought. Access tools to aid in self-care such as: expert opinions, affirmations, reflective exercises and more!.",
+  "This app is for the learning purpose where user can get training on any subject or field they want, here the user are of two types Trainer or Trainee."
 ];

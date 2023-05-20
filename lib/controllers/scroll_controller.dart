@@ -11,7 +11,7 @@ class ScrollableController extends GetxController {
   ScrollController get controller => scrollController;
 
   scroll(int index) {
-    double offset = index == 1 ? 270 : index == 2 ? 255 : index == 3 ? 250 : 245;
+    double offset = index == 1 ? 270 : index == 2 ? 255 : index == 3 ? 280 : index == 4 ? 280 : 300;
     controller.animateTo(
       AppDimensions.normalize( offset * index.toDouble() ),
       duration: const Duration(seconds: 1),
@@ -21,7 +21,7 @@ class ScrollableController extends GetxController {
 
 
   scrollMobile(int index) {
-    double offset = index == 1 ? 290 : index == 2 ? 360 : index == 3 ? 300 : 310;
+    double offset = index == 1 ? 285 : index == 2 ? 300 : index == 3 ? 310 : index == 4 ? 315 : 350;
     controller.animateTo(
       AppDimensions.normalize( offset * index.toDouble() ),
       duration: const Duration(seconds: 1),

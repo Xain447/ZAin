@@ -9,6 +9,7 @@ import 'package:my_portfolio/src/config/space.dart';
 import 'package:my_portfolio/src/config/typography.dart';
 import 'package:my_portfolio/src/constants.dart';
 import 'package:my_portfolio/src/utils/color_manager.dart';
+import 'package:my_portfolio/src/utils/values_manager.dart';
 
 class ServiceCardBackWidget extends StatelessWidget {
   final String serviceDesc;
@@ -24,12 +25,12 @@ class ServiceCardBackWidget extends StatelessWidget {
         Text(
           serviceDesc,
           textAlign: TextAlign.justify,
-          style: AppText.l1!.copyWith(fontSize: AppDimensions.font(7), color: ColorManager.primaryColor),
+          style: AppText.l1!.copyWith(fontSize: AppDimensions.font(6), color: ColorManager.primaryColor),
         ),
         Space.y1!,
         SizedBox(
-          height: AppDimensions.normalize(14),
-          width: AppDimensions.normalize(60),
+          height: AppDimensions.normalize(12),
+          width: AppDimensions.normalize(50),
           child: MaterialButton(
             color: ColorManager.secondaryColor,
             onPressed: () => showDialog(
@@ -66,9 +67,10 @@ class ServiceCardBackWidget extends StatelessWidget {
           MaterialButton(
             height: 40.0,
             onPressed: () => openURL(
-              'https://api.whatsapp.com/send?phone=923460159889',
+              'https://api.whatsapp.com/send?phone=923139844838',
             ),
-            color: const Color(0xff34CB62),
+            color: const Color(0xff13A800),
+            elevation: ValuesManager.vm6,
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -90,25 +92,29 @@ class ServiceCardBackWidget extends StatelessWidget {
           MaterialButton(
             height: 40.0,
             onPressed: () => openURL(
-              'https://www.upwork.com/freelancers/~0197b0f6aaeba9675f',
+              'https://www.fiverr.com/zainkhan569/develop-android-and-ios-apps-using-flutter',
             ),
             color: const Color(0xff13A800),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Image.network(
-                  'https://img.icons8.com/ios-filled/50/000000/upwork.png',
-                  height: 35.0,
-                  color: Colors.white,
-                ),
-                Space.x!,
-                Text(
-                  'Upwork',
-                  style: AppText.l1!.copyWith(
+            elevation: ValuesManager.vm6,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: ValuesManager.vm10),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Image.asset(
+                    'assets/fiver.png',
+                    height: 25.0,
                     color: Colors.white,
                   ),
-                ),
-              ],
+                  Space.x!,
+                  Text(
+                    'Fiver',
+                    style: AppText.l1!.copyWith(
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

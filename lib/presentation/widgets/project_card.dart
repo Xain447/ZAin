@@ -15,9 +15,11 @@ class ProjectCard extends StatefulWidget {
   final String projectTitle;
   final String projectDescription;
   final IconData? projectIconData;
+  final double? conHeight;
+  final double? conWidth;
 
   const ProjectCard({Key? key, this.banner, this.projectIcon, this.projectLink, this.projectIconData,
-    required this.projectTitle, required this.projectDescription,}) : super(key: key);
+    required this.projectTitle, required this.projectDescription, this.conHeight, this.conWidth,}) : super(key: key);
 
   @override
   ProjectCardState createState() => ProjectCardState();
@@ -50,8 +52,8 @@ class ProjectCardState extends State<ProjectCard> {
       child: Container(
         margin: Space.h,
         padding: Space.all(),
-        width: AppDimensions.normalize(150),
-        height: AppDimensions.normalize(90),
+        width: widget.conWidth ?? AppDimensions.normalize(150),
+        height: widget.conHeight ?? AppDimensions.normalize(90),
         decoration: BoxDecoration(
           color: ColorManager.primaryColor,
           borderRadius: BorderRadius.circular(20),
@@ -101,16 +103,16 @@ class ProjectCardState extends State<ProjectCard> {
                 Icon(
                   widget.projectIconData,
                   color: ColorManager.blueColor,
-                  size: height * 0.1,
+                  size: width < 600 ? height * 0.05 : height * 0.1,
                 ) : Container(),
 
-                (width > 1135 || width < 950) ?
+                (width > 1135) ?
                 SizedBox( height: height * 0.02 ) : const SizedBox(),
 
                 (width > 1135 || width < 950) ?
                 Text(
                   widget.projectTitle,
-                  style: AppText.b2b,
+                  style: AppText.b2b!.copyWith(color: ColorManager.whiteColor),
                   textAlign: TextAlign.center,
                 ) : Container(),
 
@@ -121,6 +123,7 @@ class ProjectCardState extends State<ProjectCard> {
                 Text(
                   widget.projectDescription,
                   textAlign: TextAlign.center,
+                  style: TextStyle(color: ColorManager.whiteColor),
                 ),
 
                 SizedBox(
